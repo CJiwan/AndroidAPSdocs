@@ -1,14 +1,14 @@
 (Open-APS-features-DynamicISF)=
 ## DynamicISF (DynISF)
-DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring.
+DynamicISF a été ajouté dans la version 3.2 d'AAPS et nécessite le démarrage de l'Objectif 11 pour être utilisé. Sélectionnez DynamicISF dans l'assistant de configuration pour l'activer. Il n'est recommandé qu'aux utilisateurs avancés qui maîtrisent bien les contrôles et la surveillance d'AAPS.
 
-Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
+Veuillez noter que pour utiliser correctement DynamicISF, la base de données AAPS doit contenir un minimum de cinq jours de données.
 
-DynamicISF adapts the insulin sensitivity factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
+DynamicISF adapte le facteur de sensibilité à l'insuline de manière dynamique en fonction de la dose quotidienne totale d'insuline (DQT) et des valeurs actuelles et prévues de la glycémie.
 
-Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
+Dynamic ISF utilise le modèle de Chris Wilson pour déterminer l'ISF à la place d'un profil statique.
 
-The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
+L'équation mise en oeuvre est la suivante : ISF = 1800 / (TDD * Ln (( glucose / "insuline diviseur") +1 ))
 
 The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
 
